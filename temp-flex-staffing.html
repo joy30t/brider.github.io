@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) with Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('brider_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-JW7MCLKQR3');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JW7MCLKQR3"></script>
+  <script src="analytics.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scale your workforce quickly with Brider's flexible and temporary staffing solutions across Suriname." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Temporary & Flex Staffing, Brider Employment Agency N.V." />
+  <meta property="og:description" content="Scale your workforce quickly with Brider's flexible and temporary staffing solutions across Suriname." />
+  <meta property="og:image" content="hero-bg.png.png" />
+  <meta property="og:site_name" content="Brider Employment Agency N.V." />
+  <!-- X / Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Temporary & Flex Staffing, Brider Employment Agency N.V." />
+  <meta name="twitter:description" content="Scale your workforce quickly with Brider's flexible and temporary staffing solutions across Suriname." />
+  <meta name="twitter:image" content="hero-bg.png.png" />
+  <title>Temporary & Flex Staffing, Brider Employment Agency N.V.</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: #1a2340; background: #fff; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    :root {
+      --navy: #0b2218; --navy-mid: #0f2d20; --navy-light: #1a4530;
+      --gold: #c9a227; --gold-light: #e2b84a; --gold-pale: #f5e9c0;
+      --cream: #fdf8ee; --muted: #5a6480; --white: #ffffff;
+      --radius: 10px; --shadow: 0 6px 28px rgba(11,34,24,.13); --transition: 0.3s ease;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy); box-shadow: 0 2px 14px rgba(0,0,0,.3); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--navy); font-size: 1.1rem; flex-shrink: 0; }
+    .logo-name { font-size: .98rem; font-weight: 800; color: var(--white); }
+    .logo-sub  { font-size: .6rem; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; }
+    .nav-back { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.7); font-size: .88rem; font-weight: 500; transition: color var(--transition); }
+    .nav-back:hover { color: var(--gold); }
+    .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #081510 100%); color: var(--white); padding: 72px 0 64px; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; width: 420px; height: 420px; border-radius: 50%; border: 1px solid rgba(201,162,39,.1); top: -100px; right: -80px; pointer-events: none; }
+    .hero-icon { font-size: 3rem; margin-bottom: 18px; }
+    .hero-badge { display: inline-block; background: rgba(201,162,39,.15); color: var(--gold-light); font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 14px; border: 1px solid rgba(201,162,39,.2); }
+    .hero-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+    .hero-title span { color: var(--gold); }
+    .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.7); max-width: 560px; }
+    .content-section { padding: 72px 0; }
+    .content-section.cream { background: var(--cream); }
+    .overview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .overview-text h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 14px; }
+    .overview-text p  { color: var(--muted); margin-bottom: 14px; font-size: .97rem; }
+    .benefits-list { display: flex; flex-direction: column; gap: 14px; }
+    .benefit-item { display: flex; align-items: flex-start; gap: 14px; background: var(--white); border: 1.5px solid #e8ecf5; border-radius: 12px; padding: 18px 20px; transition: border-color var(--transition), box-shadow var(--transition); }
+    .benefit-item:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+    .benefit-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .benefit-text strong { display: block; font-weight: 700; font-size: .95rem; margin-bottom: 3px; }
+    .benefit-text span   { font-size: .85rem; color: var(--muted); }
+    .process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 8px; }
+    .step-card { background: var(--white); border: 1.5px solid #e8ecf5; border-radius: 14px; padding: 24px 20px; text-align: center; }
+    .step-num { width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: var(--gold); font-weight: 900; font-size: .88rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+    .step-card h3 { font-size: .92rem; font-weight: 700; margin-bottom: 6px; }
+    .step-card p  { font-size: .82rem; color: var(--muted); }
+    .section-badge { display: inline-block; background: var(--gold-pale); color: var(--navy); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 10px; }
+    .section-title { font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
+    .section-sub   { color: var(--muted); font-size: .95rem; margin-bottom: 36px; max-width: 540px; }
+    .use-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+    .use-case { background: var(--white); border: 1.5px solid #e8ecf5; border-radius: 12px; padding: 20px; text-align: center; }
+    .use-case .uc-icon { font-size: 2rem; margin-bottom: 10px; }
+    .use-case h4 { font-size: .9rem; font-weight: 700; margin-bottom: 6px; }
+    .use-case p  { font-size: .8rem; color: var(--muted); }
+    .cta-section { background: var(--navy); color: var(--white); padding: 64px 0; text-align: center; }
+    .cta-section h2 { font-size: 1.9rem; font-weight: 900; margin-bottom: 12px; }
+    .cta-section p  { color: rgba(255,255,255,.65); margin-bottom: 30px; font-size: 1rem; }
+    .btn-gold { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--navy); font-weight: 700; font-size: .95rem; padding: 13px 30px; border-radius: var(--radius); border: none; cursor: pointer; transition: var(--transition); }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(201,162,39,.35); }
+    .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--white); font-weight: 700; font-size: .95rem; padding: 13px 30px; border-radius: var(--radius); border: 2px solid rgba(255,255,255,.4); cursor: pointer; transition: var(--transition); margin-left: 12px; }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-outline-dark {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--navy); font-weight: 700; font-size: .95rem;
+      padding: 13px 30px; border-radius: var(--radius); border: 2px solid var(--navy);
+      cursor: pointer; transition: var(--transition); margin-left: 12px; text-decoration: none;
+    }
+    .btn-outline-dark:hover { border-color: var(--gold); color: var(--gold); }
+    @media(max-width:768px){.btn-outline-dark{margin-left:0;margin-top:10px}}
+    footer { background: #060f0a; color: rgba(255,255,255,.5); padding: 28px 0; text-align: center; font-size: .83rem; }
+    footer a { color: var(--gold); }
+    @media (max-width: 768px) { .overview-grid { grid-template-columns: 1fr; gap: 36px; } .process-steps, .use-cases { grid-template-columns: 1fr; } .btn-outline { margin-left: 0; margin-top: 10px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo">
+      <img src="brider-logo.png.png" alt="Brider Employment Agency N.V." style="height:1.52in;width:auto;background:#c9a227;border-radius:8px;padding:4px 8px;" />
+    </a>
+    <a href="index.html#services" class="nav-back">← Back to Services</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-icon">⏱️</div>
+    <div class="hero-badge">Our Services</div>
+    <h1 class="hero-title">Temporary &amp; <span>Flex Staffing</span></h1>
+    <p class="hero-desc">Scale your workforce up or down on demand. Brider delivers ready-to-work temporary and flex staff, fast, reliable, and fully managed.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-text">
+        <span class="section-badge">Overview</span>
+        <h2 class="section-title">Agile Workforce, On Your Terms</h2>
+        <p>Business needs change. A seasonal surge, a maternity cover, a short-term project, whatever the trigger, Brider can deploy qualified temporary staff within days. We handle all the recruitment, contracts, and payroll administration so you can focus on the work.</p>
+        <p>Our flex staffing solutions are ideal for businesses that need reliable personnel quickly without the long-term commitment of a permanent hire.</p>
+        <div style="margin-top:24px;">
+          <a href="candidate-assessment.html" class="btn-outline-dark" style="margin-bottom:10px;">Candidate Self-Assessment ✏️</a>
+    <a href="index.html#contact" class="btn-gold">Request Staff Now →</a>
+        </div>
+      </div>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">🚀</div>
+          <div class="benefit-text">
+            <strong>Rapid Deployment</strong>
+            <span>Pre-vetted candidates available for placement within 24–72 hours for most roles.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📄</div>
+          <div class="benefit-text">
+            <strong>Fully Managed Contracts</strong>
+            <span>We handle all employment contracts, compliance, and legal documentation on your behalf.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💳</div>
+          <div class="benefit-text">
+            <strong>Payroll Handled by Us</strong>
+            <span>Temporary staff are on Brider's payroll, no extra HR burden for your team.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📈</div>
+          <div class="benefit-text">
+            <strong>Flexible Scale</strong>
+            <span>Increase or reduce headcount at short notice to match your operational needs.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🔄</div>
+          <div class="benefit-text">
+            <strong>Temp-to-Perm Option</strong>
+            <span>Convert a temporary hire to permanent if they prove to be the right long-term fit.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section cream">
+  <div class="container">
+    <span class="section-badge">Common Use Cases</span>
+    <h2 class="section-title">When Flex Staffing Makes Sense</h2>
+    <p class="section-sub">Whether it's a one-week gap or a six-month project, we've got you covered.</p>
+    <div class="use-cases">
+      <div class="use-case"><div class="uc-icon">🌴</div><h4>Seasonal Peaks</h4><p>Ramp up during busy periods, holidays, harvest seasons, promotional campaigns.</p></div>
+      <div class="use-case"><div class="uc-icon">🩺</div><h4>Sick or Maternity Cover</h4><p>Fill unexpected absences quickly without disrupting operations.</p></div>
+      <div class="use-case"><div class="uc-icon">🏗️</div><h4>Project-Based Work</h4><p>Short-term specialists for construction, IT rollouts, audits, and more.</p></div>
+      <div class="use-case"><div class="uc-icon">🔬</div><h4>Trial Before You Hire</h4><p>Test a candidate in your environment before committing to a permanent role.</p></div>
+      <div class="use-case"><div class="uc-icon">📦</div><h4>Overflow Workload</h4><p>Handle unexpected volume spikes without burning out your permanent team.</p></div>
+      <div class="use-case"><div class="uc-icon">💼</div><h4>Interim Management</h4><p>Experienced interim managers to lead teams during transitions or vacancies.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Need Staff Fast?</h2>
+    <p>Contact us today and we'll have qualified candidates ready for you within days.</p>
+    <a href="candidate-assessment.html" class="btn-outline" style="margin-bottom:10px;">Candidate Self-Assessment ✏️</a>
+    <a href="index.html#contact" class="btn-gold">Get in Touch →</a>
+    <a href="index.html" class="btn-outline">Back to Home</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2026 <a href="index.html">Brider Employment Agency N.V.</a>, All rights reserved.</div>
+</footer>
+</body>
+</html>

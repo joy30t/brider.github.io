@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) with Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('brider_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-JW7MCLKQR3');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JW7MCLKQR3"></script>
+  <script src="analytics.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Partner with Brider Employment Agency N.V. to find, hire, and retain top talent across Suriname's key industries." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Employer Partnership, Brider Employment Agency N.V." />
+  <meta property="og:description" content="Partner with Brider Employment Agency N.V. to find, hire, and retain top talent across Suriname's key industries." />
+  <meta property="og:image" content="hero-bg.png.png" />
+  <meta property="og:site_name" content="Brider Employment Agency N.V." />
+  <!-- X / Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Employer Partnership, Brider Employment Agency N.V." />
+  <meta name="twitter:description" content="Partner with Brider Employment Agency N.V. to find, hire, and retain top talent across Suriname's key industries." />
+  <meta name="twitter:image" content="hero-bg.png.png" />
+  <title>Employer Partnership, Brider Employment Agency N.V.</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: #1a2340; background: #fff; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    :root { --navy:#0b2218;--navy-mid:#0f2d20;--gold:#c9a227;--gold-light:#e2b84a;--gold-pale:#f5e9c0;--cream:#fdf8ee;--muted:#5a6480;--white:#ffffff;--radius:10px;--shadow:0 6px 28px rgba(11,34,24,.13);--transition:0.3s ease; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    header { position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 14px rgba(0,0,0,.3); }
+    nav { display:flex;align-items:center;justify-content:space-between;height:66px; }
+    .logo { display:flex;align-items:center;gap:10px; }
+    .logo-icon { width:36px;height:36px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--navy);font-size:1.1rem;flex-shrink:0; }
+    .logo-name { font-size:.98rem;font-weight:800;color:var(--white); }
+    .logo-sub  { font-size:.6rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em; }
+    .nav-back { display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.7);font-size:.88rem;font-weight:500;transition:color var(--transition); }
+    .nav-back:hover { color:var(--gold); }
+    .page-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#081510 100%);color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden; }
+    .page-hero::before { content:'';position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid rgba(201,162,39,.1);top:-100px;right:-80px;pointer-events:none; }
+    .hero-icon { font-size:3rem;margin-bottom:18px; }
+    .hero-badge { display:inline-block;background:rgba(201,162,39,.15);color:var(--gold-light);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:14px;border:1px solid rgba(201,162,39,.2); }
+    .hero-title { font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.15;margin-bottom:16px; }
+    .hero-title span { color:var(--gold); }
+    .hero-desc { font-size:1.05rem;color:rgba(255,255,255,.7);max-width:560px; }
+    .content-section { padding:72px 0; }
+    .content-section.cream { background:var(--cream); }
+    .overview-grid { display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start; }
+    .overview-text h2 { font-size:1.8rem;font-weight:800;margin-bottom:14px; }
+    .overview-text p  { color:var(--muted);margin-bottom:14px;font-size:.97rem; }
+    .benefits-list { display:flex;flex-direction:column;gap:14px; }
+    .benefit-item { display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1.5px solid #e8ecf5;border-radius:12px;padding:18px 20px;transition:border-color var(--transition),box-shadow var(--transition); }
+    .benefit-item:hover { border-color:var(--gold);box-shadow:var(--shadow); }
+    .benefit-icon { font-size:1.4rem;flex-shrink:0;margin-top:2px; }
+    .benefit-text strong { display:block;font-weight:700;font-size:.95rem;margin-bottom:3px; }
+    .benefit-text span   { font-size:.85rem;color:var(--muted); }
+    .tiers { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
+    .tier-card { border-radius:16px;padding:30px 24px;position:relative;overflow:hidden; }
+    .tier-card.standard { background:var(--white);border:1.5px solid #e8ecf5; }
+    .tier-card.preferred { background:var(--navy);color:var(--white);border:1.5px solid var(--navy); }
+    .tier-card.strategic { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);color:var(--white);border:2px solid var(--gold); }
+    .tier-label { font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px; }
+    .tier-card.standard .tier-label { color:var(--muted); }
+    .tier-card.preferred .tier-label { color:var(--gold-light); }
+    .tier-card.strategic .tier-label { color:var(--gold); }
+    .tier-card h3 { font-size:1.15rem;font-weight:800;margin-bottom:16px; }
+    .tier-card.standard h3 { color:var(--navy); }
+    .tier-feature { display:flex;align-items:center;gap:8px;font-size:.83rem;margin-bottom:9px; }
+    .tier-card.standard .tier-feature { color:var(--muted); }
+    .tier-card.preferred .tier-feature,
+    .tier-card.strategic .tier-feature { color:rgba(255,255,255,.8); }
+    .tier-check { font-size:.85rem; }
+    .section-badge { display:inline-block;background:var(--gold-pale);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px; }
+    .section-title { font-size:1.6rem;font-weight:800;margin-bottom:10px; }
+    .section-sub   { color:var(--muted);font-size:.95rem;margin-bottom:36px;max-width:540px; }
+    .cta-section { background:var(--navy);color:var(--white);padding:64px 0;text-align:center; }
+    .cta-section h2 { font-size:1.9rem;font-weight:900;margin-bottom:12px; }
+    .cta-section p  { color:rgba(255,255,255,.65);margin-bottom:30px;font-size:1rem; }
+    .btn-gold { display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:var(--radius);border:none;cursor:pointer;transition:var(--transition); }
+    .btn-gold:hover { background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35); }
+    .btn-outline { display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:var(--radius);border:2px solid rgba(255,255,255,.4);cursor:pointer;transition:var(--transition);margin-left:12px; }
+    .btn-outline:hover { border-color:var(--gold);color:var(--gold); }
+    .btn-outline-dark {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--navy); font-weight: 700; font-size: .95rem;
+      padding: 13px 30px; border-radius: var(--radius); border: 2px solid var(--navy);
+      cursor: pointer; transition: var(--transition); margin-left: 12px; text-decoration: none;
+    }
+    .btn-outline-dark:hover { border-color: var(--gold); color: var(--gold); }
+    @media(max-width:768px) { .btn-outline-dark { margin-left: 0; margin-top: 10px; } }
+    footer { background:#060f0a;color:rgba(255,255,255,.5);padding:28px 0;text-align:center;font-size:.83rem; }
+    footer a { color:var(--gold); }
+    @media(max-width:768px){.overview-grid,.tiers{grid-template-columns:1fr;gap:36px}.btn-outline{margin-left:0;margin-top:10px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo">
+      <img src="brider-logo.png.png" alt="Brider Employment Agency N.V." style="height:1.52in;width:auto;background:#c9a227;border-radius:8px;padding:4px 8px;" />
+    </a>
+    <a href="index.html#services" class="nav-back">← Back to Services</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-icon">🤝</div>
+    <div class="hero-badge">Our Services</div>
+    <h1 class="hero-title">Employer <span>Partnership</span></h1>
+    <p class="hero-desc">Build a long-term relationship with a staffing partner who truly understands your business, and acts as an extension of your HR team.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-text">
+        <span class="section-badge">Overview</span>
+        <h2 class="section-title">More Than a Supplier, A Strategic Partner</h2>
+        <p>The most successful organisations don't treat their staffing agency as a transactional vendor. They build a partnership. Brider's Employer Partnership programme is designed for companies that want a consistent, proactive, and deeply integrated staffing relationship.</p>
+        <p>Your dedicated account manager learns your business inside and out, your hiring patterns, culture, growth plans, and challenges, and works alongside you to build a talent strategy that supports your goals year-round.</p>
+        <div style="margin-top:24px;">
+          <a href="candidate-assessment.html" class="btn-outline-dark" style="margin-bottom:10px;">Candidate Self-Assessment ✏️</a>
+    <a href="index.html#contact" class="btn-gold">Become a Partner →</a>
+        </div>
+      </div>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">👤</div>
+          <div class="benefit-text">
+            <strong>Dedicated Account Manager</strong>
+            <span>One point of contact who knows your business, your team, and your standards, always available.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">⭐</div>
+          <div class="benefit-text">
+            <strong>Priority Candidate Access</strong>
+            <span>Partner clients get first access to our top candidates before roles are advertised on the open market.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🗂️</div>
+          <div class="benefit-text">
+            <strong>Talent Pipeline Building</strong>
+            <span>We proactively build a pre-qualified pool of candidates tailored to your recurring hiring needs.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📅</div>
+          <div class="benefit-text">
+            <strong>Workforce Planning Support</strong>
+            <span>Quarterly reviews and market insights to help you anticipate and plan for future talent needs.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💲</div>
+          <div class="benefit-text">
+            <strong>Preferential Rates</strong>
+            <span>Partner agreements include volume-based pricing and reduced time-to-fill costs over time.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section cream">
+  <div class="container">
+    <span class="section-badge">Partnership Tiers</span>
+    <h2 class="section-title">Find the Right Level of Partnership</h2>
+    <p class="section-sub">From occasional support to fully integrated workforce management, choose what fits your business.</p>
+    <div class="tiers">
+      <div class="tier-card standard">
+        <div class="tier-label">Tier 1</div>
+        <h3>Standard Partner</h3>
+        <div class="tier-feature"><span class="tier-check">✓</span> Dedicated consultant</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Access to candidate pool</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Bi-annual account review</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Standard SLA</div>
+      </div>
+      <div class="tier-card preferred">
+        <div class="tier-label">⭐ Tier 2, Most Popular</div>
+        <h3>Preferred Partner</h3>
+        <div class="tier-feature"><span class="tier-check">✓</span> Named account manager</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Priority candidate access</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Quarterly business review</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Reduced placement fees</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Talent pipeline management</div>
+      </div>
+      <div class="tier-card strategic">
+        <div class="tier-label">✦ Tier 3, Premium</div>
+        <h3>Strategic Partner</h3>
+        <div class="tier-feature"><span class="tier-check">✓</span> Fully embedded HR support</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> On-site Brider presence</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Workforce planning &amp; analytics</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Executive search included</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Bespoke SLA &amp; pricing</div>
+        <div class="tier-feature"><span class="tier-check">✓</span> Monthly executive reporting</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Let's Build Something Long-Term</h2>
+    <p>Reach out today to discuss a partnership arrangement that fits your organisation's size, industry, and hiring needs.</p>
+    <a href="candidate-assessment.html" class="btn-outline" style="margin-bottom:10px;">Candidate Self-Assessment ✏️</a>
+    <a href="index.html#contact" class="btn-gold">Start the Conversation →</a>
+    <a href="index.html" class="btn-outline">Back to Home</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2026 <a href="index.html">Brider Employment Agency N.V.</a>, All rights reserved.</div>
+</footer>
+</body>
+</html>

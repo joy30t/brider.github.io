@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) with Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('brider_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-JW7MCLKQR3');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JW7MCLKQR3"></script>
+  <script src="analytics.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brider's smart assessment tools evaluate candidate skills, competencies, and fit — helping employers make better hiring decisions." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Smart Assessment, Brider Employment Agency N.V." />
+  <meta property="og:description" content="Brider's smart assessment tools evaluate candidate skills, competencies, and fit — helping employers make better hiring decisions." />
+  <meta property="og:image" content="hero-bg.png.png" />
+  <meta property="og:site_name" content="Brider Employment Agency N.V." />
+  <!-- X / Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Smart Assessment, Brider Employment Agency N.V." />
+  <meta name="twitter:description" content="Brider's smart assessment tools evaluate candidate skills, competencies, and fit — helping employers make better hiring decisions." />
+  <meta name="twitter:image" content="hero-bg.png.png" />
+  <title>Smart Assessment, Brider Employment Agency N.V.</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: #1a2340; background: #fff; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    :root {
+      --navy: #0b2218; --navy-mid: #0f2d20; --navy-light: #1a4530;
+      --gold: #c9a227; --gold-light: #e2b84a; --gold-pale: #f5e9c0;
+      --cream: #fdf8ee; --muted: #5a6480; --white: #ffffff;
+      --radius: 10px; --shadow: 0 6px 28px rgba(11,34,24,.13); --transition: 0.3s ease;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+
+    /* NAV */
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy); box-shadow: 0 2px 14px rgba(0,0,0,.3); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--navy); font-size: 1.1rem; flex-shrink: 0; }
+    .logo-name { font-size: .98rem; font-weight: 800; color: var(--white); }
+    .logo-sub  { font-size: .6rem; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; }
+    .nav-back { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.7); font-size: .88rem; font-weight: 500; transition: color var(--transition); }
+    .nav-back:hover { color: var(--gold); }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #081510 100%);
+      color: var(--white); padding: 72px 0 64px; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; width: 420px; height: 420px; border-radius: 50%;
+      border: 1px solid rgba(201,162,39,.1); top: -100px; right: -80px; pointer-events: none;
+    }
+    .hero-icon { font-size: 3rem; margin-bottom: 18px; }
+    .hero-badge {
+      display: inline-block; background: rgba(201,162,39,.15); color: var(--gold-light);
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 14px; border: 1px solid rgba(201,162,39,.2);
+    }
+    .hero-title { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+    .hero-title span { color: var(--gold); }
+    .hero-desc { font-size: 1.05rem; color: rgba(255,255,255,.7); max-width: 580px; margin-bottom: 32px; }
+    .hero-stats { display: flex; gap: 36px; flex-wrap: wrap; margin-top: 8px; }
+    .hero-stat strong { display: block; font-size: 1.8rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .hero-stat span { font-size: .8rem; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .06em; }
+
+    /* SECTIONS */
+    .content-section { padding: 72px 0; }
+    .content-section.cream { background: var(--cream); }
+    .section-badge {
+      display: inline-block; background: var(--gold-pale); color: var(--navy);
+      font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
+    }
+    .section-title { font-size: 1.6rem; font-weight: 800; margin-bottom: 10px; }
+    .section-sub   { color: var(--muted); font-size: .95rem; margin-bottom: 40px; max-width: 580px; }
+
+    /* PROCESS TIMELINE */
+    .timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 28px; top: 28px; bottom: 28px; width: 2px; background: linear-gradient(to bottom, var(--gold), rgba(201,162,39,.1)); }
+    .timeline-item { display: flex; gap: 32px; align-items: flex-start; padding: 0 0 40px; position: relative; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .t-dot {
+      width: 56px; height: 56px; border-radius: 50%; background: var(--navy); border: 3px solid var(--gold);
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; z-index: 1;
+    }
+    .t-body { flex: 1; padding-top: 8px; }
+    .t-body h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 6px; }
+    .t-body p  { font-size: .92rem; color: var(--muted); margin-bottom: 14px; }
+    .t-tools { display: flex; flex-wrap: wrap; gap: 8px; }
+    .t-tool { background: var(--gold-pale); color: var(--navy); font-size: .75rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+    /* TOOLS GRID */
+    .tools-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .tool-card {
+      background: var(--white); border: 1.5px solid #e8ecf5; border-radius: 16px;
+      padding: 28px 22px; transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .tool-card:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+    .tool-icon { font-size: 2rem; margin-bottom: 12px; }
+    .tool-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 6px; }
+    .tool-card p  { font-size: .85rem; color: var(--muted); margin-bottom: 14px; }
+    .tool-tag { display: inline-block; background: #eef2ff; color: #4338ca; font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; }
+
+    /* MARKET DATA SECTION */
+    .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .data-card {
+      background: var(--navy); color: var(--white); border-radius: 16px; padding: 28px 24px;
+    }
+    .data-card h3 { font-size: 1rem; font-weight: 800; color: var(--gold-light); margin-bottom: 8px; }
+    .data-card p  { font-size: .88rem; color: rgba(255,255,255,.65); margin-bottom: 16px; }
+    .data-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .data-list li { font-size: .85rem; color: rgba(255,255,255,.8); display: flex; align-items: flex-start; gap: 8px; }
+    .data-list li::before { content: '›'; color: var(--gold); font-weight: 900; flex-shrink: 0; }
+
+    /* METRICS */
+    .metrics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .metric-card { background: var(--white); border: 1.5px solid #e8ecf5; border-radius: 16px; padding: 28px 20px; text-align: center; }
+    .metric-val { font-size: 2.2rem; font-weight: 900; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+    .metric-val span { color: var(--gold); }
+    .metric-label { font-size: .8rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+    .metric-desc  { font-size: .78rem; color: var(--muted); margin-top: 6px; }
+
+    /* BENEFIT ITEMS */
+    .benefits-list { display: flex; flex-direction: column; gap: 14px; }
+    .benefit-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--white); border: 1.5px solid #e8ecf5; border-radius: 12px; padding: 18px 20px;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .benefit-item:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+    .benefit-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .benefit-text strong { display: block; font-weight: 700; font-size: .95rem; margin-bottom: 3px; }
+    .benefit-text span   { font-size: .85rem; color: var(--muted); }
+
+    /* CTA */
+    .cta-section { background: var(--navy); color: var(--white); padding: 72px 0; text-align: center; }
+    .cta-section h2 { font-size: 2rem; font-weight: 900; margin-bottom: 14px; }
+    .cta-section p  { color: rgba(255,255,255,.65); margin-bottom: 34px; font-size: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--navy); font-weight: 800; font-size: .95rem;
+      padding: 14px 32px; border-radius: var(--radius); border: none; cursor: pointer; transition: var(--transition);
+      text-decoration: none;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(201,162,39,.35); }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--white); font-weight: 700; font-size: .95rem;
+      padding: 14px 32px; border-radius: var(--radius); border: 2px solid rgba(255,255,255,.4); cursor: pointer;
+      transition: var(--transition); margin-left: 12px; text-decoration: none;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Footer */
+    footer { background: #060f0a; color: rgba(255,255,255,.5); padding: 28px 0; text-align: center; font-size: .83rem; }
+    footer a { color: var(--gold); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .tools-grid { grid-template-columns: 1fr 1fr; }
+      .metrics-grid { grid-template-columns: 1fr 1fr; }
+      .data-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .tools-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: 1fr 1fr; }
+      .hero-stats { gap: 20px; }
+      .btn-outline { margin-left: 0; margin-top: 10px; }
+      .timeline::before { left: 22px; }
+      .t-dot { width: 44px; height: 44px; font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo">
+      <img src="brider-logo.png.png" alt="Brider Employment Agency N.V." style="height:1.52in;width:auto;background:#c9a227;border-radius:8px;padding:4px 8px;" />
+    </a>
+    <a href="index.html#services" class="nav-back">← Back to Services</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-icon">🧠</div>
+    <div class="hero-badge">For Employers</div>
+    <h1 class="hero-title">Smart Assessment &<br><span>Market Intelligence</span></h1>
+    <p class="hero-desc">Brider combines scientifically validated candidate assessments with live Caribbean market data, so every placement is backed by evidence, not just instinct.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>200<span style="font-size:1.2rem">%+</span></strong><span>Average ROI within 6 months</span></div>
+      <div class="hero-stat"><strong>85<span style="font-size:1.2rem">%</span></strong><span>Placement retention target</span></div>
+      <div class="hero-stat"><strong>4</strong><span>Assessment dimensions</span></div>
+      <div class="hero-stat"><strong>14–21</strong><span>Day avg. time-to-fill</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-badge">Our Process</div>
+    <h2 class="section-title">How We Maximise Every Placement</h2>
+    <p class="section-sub">Three integrated stages ensure the right candidate reaches the right role, with data confirming every decision.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="t-dot">🎯</div>
+        <div class="t-body">
+          <h3>Stage 1, Candidate Assessment</h3>
+          <p>Every candidate is evaluated across four dimensions: technical job skills, soft skills and personality, language proficiency, and career goals. We use scientifically validated tools that are designed for multilingual, multicultural workforces, reducing bias and improving predictive accuracy.</p>
+          <div class="t-tools">
+            <span class="t-tool">Psychometric Testing</span>
+            <span class="t-tool">DISC Personality Profile</span>
+            <span class="t-tool">Skills Simulation</span>
+            <span class="t-tool">Language Assessment</span>
+            <span class="t-tool">Cognitive Ability Tests</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-dot">📊</div>
+        <div class="t-body">
+          <h3>Stage 2, Market Intelligence Cross-Check</h3>
+          <p>We validate every candidate profile against real-time Caribbean and Suriname labour market data. Compensation packages are benchmarked against current salary surveys. Skill demand is cross-referenced with ILO, World Bank, and IDB regional data, ensuring the placement is sustainable and competitively priced.</p>
+          <div class="t-tools">
+            <span class="t-tool">ILO Labour Data</span>
+            <span class="t-tool">Salary Benchmarking</span>
+            <span class="t-tool">IDB Skill Demand Reports</span>
+            <span class="t-tool">World Bank Indicators</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="t-dot">🤝</div>
+        <div class="t-body">
+          <h3>Stage 3, Strategic Placement & Follow-Up</h3>
+          <p>Assessment data is matched to your role requirements and organisational culture. After placement, we track quality-of-hire at 30, 60, and 90 days. Outcomes feed back into our models, making each subsequent placement smarter than the last.</p>
+          <div class="t-tools">
+            <span class="t-tool">Skills-to-Role Matching</span>
+            <span class="t-tool">Culture Fit Analysis</span>
+            <span class="t-tool">90-Day Performance Tracking</span>
+            <span class="t-tool">Retention Monitoring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSESSMENT TOOLS -->
+<section class="content-section cream">
+  <div class="container">
+    <div class="section-badge">Assessment Tools</div>
+    <h2 class="section-title">What We Measure</h2>
+    <p class="section-sub">Our assessment framework covers the full candidate profile, going far beyond a CV or interview alone.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-icon">⚙️</div>
+        <h3>Technical Job Skills</h3>
+        <p>Role-specific competency tests across ICT, construction, healthcare, finance, and energy. Candidates complete real-world simulations that reflect actual job tasks.</p>
+        <span class="tool-tag">Skills Simulation</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🧩</div>
+        <h3>Cognitive Ability</h3>
+        <p>Logical reasoning, numerical aptitude, and problem-solving assessments validated for workplace performance prediction across all role levels.</p>
+        <span class="tool-tag">Psychometric</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🎭</div>
+        <h3>Personality & Behavioural Profile</h3>
+        <p>DISC-based profiling reveals how candidates communicate, handle pressure, lead teams, and adapt to change, essential for culture fit decisions.</p>
+        <span class="tool-tag">DISC Framework</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">💬</div>
+        <h3>Language Proficiency</h3>
+        <p>Dutch, English, and Spanish assessments using standardised frameworks. Suriname's multilingual market demands verified language skills for most professional roles.</p>
+        <span class="tool-tag">CEF Standard</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🌟</div>
+        <h3>Soft Skills & Leadership</h3>
+        <p>Situational judgement tests measure collaboration, conflict resolution, time management, and emotional intelligence, the skills that determine long-term performance.</p>
+        <span class="tool-tag">Situational Judgement</span>
+      </div>
+      <div class="tool-card">
+        <div class="tool-icon">🧭</div>
+        <h3>Career Fit & Motivation</h3>
+        <p>Understanding a candidate's goals, salary expectations, availability, and growth ambitions ensures placements that stick, reducing costly early turnover.</p>
+        <span class="tool-tag">Retention Predictor</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET DATA -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-badge">Market Intelligence</div>
+    <h2 class="section-title">Backed by Real Data</h2>
+    <p class="section-sub">We don't guess at salary rates or skill availability. Every placement recommendation draws from verified regional sources.</p>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <h3>📈 Labour Market Data</h3>
+        <p>We monitor live employment trends across Suriname and the wider Caribbean to identify supply and demand shifts before they affect your hiring.</p>
+        <ul class="data-list">
+          <li>ILO Suriname employment profiles & occupational data</li>
+          <li>World Bank Caribbean labour force statistics</li>
+          <li>ECLAC regional productivity & trend reports</li>
+          <li>IDB priority skills investment data (ICT, tourism, agriculture)</li>
+          <li>In-demand skills by sector updated quarterly</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <h3>💰 Salary Benchmarking</h3>
+        <p>We validate every offer against current compensation surveys so you attract top candidates without overpaying, and candidates don't leave for better offers elsewhere.</p>
+        <ul class="data-list">
+          <li>2Max Group Latin America & Caribbean salary surveys</li>
+          <li>Playroll real-time Caribbean compensation data</li>
+          <li>Ravio benchmarks across 50+ countries</li>
+          <li>Role-specific pay ranges by industry and seniority</li>
+          <li>Salary accuracy target: within ±10% of market rate</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <h3>🔍 In-Demand Skills, Suriname Focus</h3>
+        <p>The IDB's $40M Suriname investment highlights the skills gaps we prioritise in our candidate pipeline.</p>
+        <ul class="data-list">
+          <li>ICT & digital skills (70% of economy dependent)</li>
+          <li>English language proficiency (cross-sector gap)</li>
+          <li>Industrial maintenance & technical trades</li>
+          <li>Healthcare & clinical specialisations</li>
+          <li>Finance, compliance & regulatory expertise</li>
+        </ul>
+      </div>
+      <div class="data-card">
+        <h3>🏗️ Sector Intelligence</h3>
+        <p>We track hiring trends across Brider's core sectors so we can advise you on talent availability, competition, and the right time to hire.</p>
+        <ul class="data-list">
+          <li>Construction & engineering pipeline demand</li>
+          <li>Healthcare workforce shortages & solutions</li>
+          <li>Energy sector (oil, gas, renewables) skill shifts</li>
+          <li>Financial services regulatory talent needs</li>
+          <li>Hospitality & tourism seasonal demand patterns</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE METRICS -->
+<section class="content-section cream">
+  <div class="container">
+    <div class="section-badge">Performance Standards</div>
+    <h2 class="section-title">How We Measure Success</h2>
+    <p class="section-sub">We hold ourselves to clear, measurable outcomes, so you always know how your placements are performing.</p>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-val">14–21<span> days</span></div>
+        <div class="metric-label">Time to Fill</div>
+        <div class="metric-desc">Average days from job brief to accepted offer</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">85<span>%+</span></div>
+        <div class="metric-label">Retention Rate</div>
+        <div class="metric-desc">Candidates placed who remain in role after 6 months</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">90<span>%+</span></div>
+        <div class="metric-label">Skills Match Score</div>
+        <div class="metric-desc">Candidate skills aligned to job requirements</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val">±10<span>%</span></div>
+        <div class="metric-label">Salary Accuracy</div>
+        <div class="metric-desc">Offers within ±10% of current market benchmark</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BRIDER -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-badge">Why It Matters</div>
+    <h2 class="section-title">The Cost of a Bad Placement</h2>
+    <p class="section-sub">Getting it wrong is expensive. Our assessment model exists to protect your investment.</p>
+    <div class="benefits-list">
+      <div class="benefit-item">
+        <div class="benefit-icon">💸</div>
+        <div class="benefit-text">
+          <strong>A failed placement costs 50–200% of the annual salary</strong>
+          <span>Recruitment fees, onboarding, lost productivity, and re-hiring costs add up fast. Assessment-backed placements dramatically reduce this risk.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">⏱️</div>
+        <div class="benefit-text">
+          <strong>Time-to-productivity matters as much as time-to-fill</strong>
+          <span>Candidates assessed for cognitive ability and role-fit ramp up 40% faster than those hired on CV alone. You get returns sooner.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">🔒</div>
+        <div class="benefit-text">
+          <strong>Retention is built in from day one</strong>
+          <span>Understanding a candidate's career motivations before placement means they stay longer. Our 85%+ 6-month retention target is built on this principle.</span>
+        </div>
+      </div>
+      <div class="benefit-item">
+        <div class="benefit-icon">📐</div>
+        <div class="benefit-text">
+          <strong>Data removes bias and subjectivity</strong>
+          <span>Structured assessments standardise your hiring, creating defensible, fair decisions that protect your organisation and improve workforce diversity.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Hire Smarter?</h2>
+    <p>Talk to a Brider consultant about building an assessment-backed recruitment strategy for your organisation.</p>
+    <a href="index.html#contact" class="btn-gold">Request a Consultation →</a>
+    <a href="employer-partnership.html" class="btn-outline">View Partnership Plans</a>
+    <a href="candidate-assessment.html" class="btn-outline">Candidate Self-Assessment ✏️</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Brider Employment Agency N.V. · <a href="index.html">Home</a> · <a href="mailto:info@bridernv.com">info@bridernv.com</a></p>
+</footer>
+
+</body>
+</html>

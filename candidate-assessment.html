@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) with Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('brider_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-JW7MCLKQR3');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JW7MCLKQR3"></script>
+  <script src="analytics.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Take Brider's smart candidate assessment and let us match you with the right employer in Suriname." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Skills Self-Assessment, Brider Employment Agency N.V." />
+  <meta property="og:description" content="Take Brider's smart candidate assessment and let us match you with the right employer in Suriname." />
+  <meta property="og:image" content="hero-bg.png.png" />
+  <meta property="og:site_name" content="Brider Employment Agency N.V." />
+  <!-- X / Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Skills Self-Assessment, Brider Employment Agency N.V." />
+  <meta name="twitter:description" content="Take Brider's smart candidate assessment and let us match you with the right employer in Suriname." />
+  <meta name="twitter:image" content="hero-bg.png.png" />
+  <title>Skills Self-Assessment, Brider Employment Agency N.V.</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: #1a2340; background: #f8faff; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    :root {
+      --navy: #0b2218; --navy-mid: #0f2d20; --navy-light: #1a4530;
+      --gold: #c9a227; --gold-light: #e2b84a; --gold-pale: #f5e9c0;
+      --cream: #fdf8ee; --muted: #5a6480; --white: #ffffff;
+      --radius: 10px; --shadow: 0 6px 28px rgba(11,34,24,.13); --transition: 0.3s ease;
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    header { position: sticky; top: 0; z-index: 100; background: var(--navy); box-shadow: 0 2px 14px rgba(0,0,0,.3); }
+    nav { display: flex; align-items: center; justify-content: space-between; height: 66px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-icon { width: 36px; height: 36px; background: var(--gold); border-radius: 7px; display: flex; align-items: center; justify-content: center; font-weight: 900; color: var(--navy); font-size: 1.1rem; flex-shrink: 0; }
+    .logo-name { font-size: .98rem; font-weight: 800; color: var(--white); }
+    .logo-sub  { font-size: .6rem; color: var(--gold); text-transform: uppercase; letter-spacing: .1em; }
+    .nav-back { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.7); font-size: .88rem; font-weight: 500; transition: color var(--transition); }
+    .nav-back:hover { color: var(--gold); }
+
+    /* HERO */
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #081510 100%);
+      color: var(--white); padding: 56px 0 52px; text-align: center; position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: ''; position: absolute; width: 360px; height: 360px; border-radius: 50%;
+      border: 1px solid rgba(201,162,39,.1); top: -80px; right: -60px; pointer-events: none;
+    }
+    .hero-icon { font-size: 2.8rem; margin-bottom: 14px; }
+    .hero-badge {
+      display: inline-block; background: rgba(201,162,39,.15); color: var(--gold-light);
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 12px; border: 1px solid rgba(201,162,39,.2);
+    }
+    .hero-title { font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 900; line-height: 1.15; margin-bottom: 12px; }
+    .hero-title span { color: var(--gold); }
+    .hero-desc { font-size: .97rem; color: rgba(255,255,255,.65); max-width: 520px; margin: 0 auto; }
+
+    /* ASSESSMENT WRAPPER */
+    .assessment-wrap { padding: 48px 0 64px; }
+
+    /* PROGRESS BAR */
+    .progress-bar-wrap { background: var(--white); border-radius: 16px; padding: 20px 28px; margin-bottom: 28px; box-shadow: var(--shadow); }
+    .progress-labels { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .progress-label { font-size: .72rem; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+    .progress-label.active { color: var(--navy); }
+    .progress-track { height: 6px; background: #e8ecf5; border-radius: 10px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--navy), var(--gold)); border-radius: 10px; transition: width 0.4s ease; }
+    .progress-text { font-size: .8rem; color: var(--muted); margin-top: 8px; text-align: right; }
+
+    /* SECTION CARD */
+    .section-card {
+      background: var(--white); border-radius: 20px; padding: 36px 36px 28px;
+      box-shadow: var(--shadow); margin-bottom: 20px; display: none;
+    }
+    .section-card.active { display: block; }
+    .section-header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+    .section-num {
+      width: 40px; height: 40px; border-radius: 50%; background: var(--navy); color: var(--gold);
+      font-weight: 900; font-size: .95rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .section-title-text { font-size: 1.2rem; font-weight: 800; }
+    .section-sub { font-size: .88rem; color: var(--muted); margin-bottom: 28px; margin-left: 54px; }
+
+    /* QUESTIONS */
+    .question-group { margin-bottom: 24px; }
+    .question-label { font-size: .9rem; font-weight: 700; margin-bottom: 10px; display: block; }
+    .question-hint  { font-size: .78rem; color: var(--muted); margin-bottom: 10px; display: block; }
+
+    /* RATING STARS */
+    .rating-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .rating-btn {
+      padding: 7px 16px; border: 1.5px solid #dde2ef; border-radius: 8px; background: var(--white);
+      font-size: .82rem; font-weight: 600; cursor: pointer; transition: all var(--transition); color: var(--muted);
+    }
+    .rating-btn:hover { border-color: var(--gold); color: var(--navy); }
+    .rating-btn.selected { background: var(--navy); border-color: var(--navy); color: var(--gold); font-weight: 700; }
+    .rating-labels { display: flex; justify-content: space-between; font-size: .7rem; color: var(--muted); margin-top: 6px; }
+
+    /* SELECT & INPUT */
+    .form-select, .form-input {
+      width: 100%; padding: 11px 16px; border: 1.5px solid #dde2ef; border-radius: 9px;
+      font-size: .9rem; font-family: inherit; color: var(--navy); background: var(--white);
+      outline: none; transition: border-color var(--transition);
+    }
+    .form-select:focus, .form-input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.12); }
+
+    /* CHECKBOX PILLS */
+    .pill-group { display: flex; flex-wrap: wrap; gap: 10px; }
+    .pill-option { display: none; }
+    .pill-label {
+      padding: 8px 18px; border: 1.5px solid #dde2ef; border-radius: 30px;
+      font-size: .84rem; font-weight: 600; cursor: pointer; transition: all var(--transition); color: var(--muted);
+      user-select: none;
+    }
+    .pill-option:checked + .pill-label { background: var(--navy); border-color: var(--navy); color: var(--gold); }
+
+    /* SECTOR GRID */
+    .sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .sector-option { display: none; }
+    .sector-label {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      padding: 16px 10px; border: 1.5px solid #dde2ef; border-radius: 12px;
+      font-size: .82rem; font-weight: 600; cursor: pointer; transition: all var(--transition);
+      color: var(--muted); text-align: center; user-select: none;
+    }
+    .sector-label span { font-size: 1.6rem; }
+    .sector-option:checked + .sector-label { background: var(--navy); border-color: var(--navy); color: var(--gold); }
+
+    /* NAV BUTTONS */
+    .section-nav { display: flex; justify-content: space-between; align-items: center; margin-top: 28px; padding-top: 20px; border-top: 1px solid #f0f3fa; }
+    .btn-prev {
+      padding: 11px 24px; border: 1.5px solid #dde2ef; border-radius: var(--radius);
+      background: var(--white); font-size: .88rem; font-weight: 600; cursor: pointer;
+      color: var(--muted); transition: all var(--transition);
+    }
+    .btn-prev:hover:not(:disabled) { border-color: var(--navy); color: var(--navy); }
+    .btn-prev:disabled { opacity: .3; cursor: not-allowed; }
+    .btn-next {
+      padding: 12px 28px; border: none; border-radius: var(--radius);
+      background: var(--navy); color: var(--gold); font-size: .9rem; font-weight: 700;
+      cursor: pointer; transition: all var(--transition);
+    }
+    .btn-next:hover { background: var(--navy-light); transform: translateY(-1px); }
+
+    /* RESULTS CARD */
+    #results-card { background: var(--white); border-radius: 20px; padding: 40px 36px; box-shadow: var(--shadow); display: none; }
+    .results-header { text-align: center; margin-bottom: 36px; }
+    .results-header .trophy { font-size: 3.5rem; margin-bottom: 12px; }
+    .results-header h2 { font-size: 1.6rem; font-weight: 900; margin-bottom: 6px; }
+    .results-header p { color: var(--muted); font-size: .92rem; }
+
+    /* SCORE BARS */
+    .score-section { margin-bottom: 32px; }
+    .score-section h3 { font-size: .88rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 16px; }
+    .score-row { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+    .score-name { font-size: .88rem; font-weight: 600; min-width: 160px; }
+    .score-track { flex: 1; height: 8px; background: #e8ecf5; border-radius: 10px; overflow: hidden; }
+    .score-fill { height: 100%; border-radius: 10px; transition: width 0.8s ease; }
+    .score-val { font-size: .82rem; font-weight: 700; color: var(--navy); min-width: 32px; text-align: right; }
+
+    /* MATCH ROLES */
+    .roles-section { margin-bottom: 32px; }
+    .roles-section h3 { font-size: 1rem; font-weight: 800; margin-bottom: 14px; }
+    .role-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .role-card {
+      border: 1.5px solid #e8ecf5; border-radius: 12px; padding: 16px 18px;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .role-card-icon { font-size: 1.5rem; flex-shrink: 0; }
+    .role-card h4 { font-size: .9rem; font-weight: 700; margin-bottom: 2px; }
+    .role-card p  { font-size: .78rem; color: var(--muted); }
+    .match-badge { display: inline-block; font-size: .7rem; font-weight: 700; padding: 2px 10px; border-radius: 20px; margin-top: 6px; }
+    .match-high { background: #dcfce7; color: #166534; }
+    .match-mid  { background: #fef9c3; color: #854d0e; }
+
+    /* APPLY CTA */
+    .apply-cta { background: var(--navy); border-radius: 16px; padding: 28px; text-align: center; color: var(--white); }
+    .apply-cta h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 8px; }
+    .apply-cta p  { font-size: .88rem; color: rgba(255,255,255,.65); margin-bottom: 18px; }
+    .btn-gold-solid {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--navy); font-weight: 800; font-size: .9rem;
+      padding: 12px 28px; border-radius: var(--radius); border: none; cursor: pointer;
+      transition: all var(--transition); text-decoration: none;
+    }
+    .btn-gold-solid:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* Footer */
+    footer { background: #060f0a; color: rgba(255,255,255,.5); padding: 28px 0; text-align: center; font-size: .83rem; }
+    footer a { color: var(--gold); }
+
+    @media (max-width: 600px) {
+      .section-card { padding: 24px 20px 20px; }
+      .section-sub { margin-left: 0; margin-top: 8px; }
+      .sector-grid { grid-template-columns: repeat(2, 1fr); }
+      .role-cards { grid-template-columns: 1fr; }
+      .score-name { min-width: 120px; font-size: .8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo">
+      <img src="brider-logo.png.png" alt="Brider Employment Agency N.V." style="height:1.52in;width:auto;background:#c9a227;border-radius:8px;padding:4px 8px;" />
+    </a>
+    <a href="index.html#jobs" class="nav-back">← Back to Jobs</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-icon">✏️</div>
+    <div class="hero-badge">For Candidates</div>
+    <h1 class="hero-title">Skills <span>Self-Assessment</span></h1>
+    <p class="hero-desc">Rate your skills across four dimensions. In 5 minutes, discover which roles you're best suited for and get matched with the right Brider consultant.</p>
+  </div>
+</section>
+
+<!-- ASSESSMENT -->
+<div class="assessment-wrap">
+  <div class="container">
+
+    <!-- PROGRESS -->
+    <div class="progress-bar-wrap">
+      <div class="progress-labels">
+        <span class="progress-label active" id="lbl-1">1. Technical</span>
+        <span class="progress-label" id="lbl-2">2. Soft Skills</span>
+        <span class="progress-label" id="lbl-3">3. Languages</span>
+        <span class="progress-label" id="lbl-4">4. Career Goals</span>
+        <span class="progress-label" id="lbl-5">Results</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:20%"></div></div>
+      <div class="progress-text" id="progress-text">Section 1 of 4</div>
+    </div>
+
+    <!-- SECTION 1: TECHNICAL SKILLS -->
+    <div class="section-card active" id="sec-1">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-title-text">Technical & Job Skills</div>
+      </div>
+      <p class="section-sub">Rate your proficiency in each area. 1 = Beginner, 5 = Expert.</p>
+
+      <div class="question-group">
+        <label class="question-label">Which sector best describes your field?</label>
+        <div class="sector-grid">
+          <label><input type="radio" name="sector" value="ICT" class="sector-option"><span class="sector-label"><span>💻</span>ICT & Digital</span></label>
+          <label><input type="radio" name="sector" value="Construction" class="sector-option"><span class="sector-label"><span>🏗️</span>Construction & Engineering</span></label>
+          <label><input type="radio" name="sector" value="Healthcare" class="sector-option"><span class="sector-label"><span>🏥</span>Healthcare & Medical</span></label>
+          <label><input type="radio" name="sector" value="Finance" class="sector-option"><span class="sector-label"><span>💰</span>Finance & Accounting</span></label>
+          <label><input type="radio" name="sector" value="Energy" class="sector-option"><span class="sector-label"><span>⚡</span>Energy & Resources</span></label>
+          <label><input type="radio" name="sector" value="Other" class="sector-option"><span class="sector-label"><span>🌐</span>Other / General</span></label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Technical skills in your field</label>
+        <span class="question-hint">How skilled are you in the core technical tools, systems, or methods of your profession?</span>
+        <div class="rating-row" id="r-technical">
+          <button class="rating-btn" data-group="technical" data-val="1" onclick="setRating('technical',1)">1, Beginner</button>
+          <button class="rating-btn" data-group="technical" data-val="2" onclick="setRating('technical',2)">2, Basic</button>
+          <button class="rating-btn" data-group="technical" data-val="3" onclick="setRating('technical',3)">3, Competent</button>
+          <button class="rating-btn" data-group="technical" data-val="4" onclick="setRating('technical',4)">4, Advanced</button>
+          <button class="rating-btn" data-group="technical" data-val="5" onclick="setRating('technical',5)">5, Expert</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Digital literacy & computer skills</label>
+        <span class="question-hint">MS Office, email, job-specific software, data tools, etc.</span>
+        <div class="rating-row" id="r-digital">
+          <button class="rating-btn" data-group="digital" data-val="1" onclick="setRating('digital',1)">1</button>
+          <button class="rating-btn" data-group="digital" data-val="2" onclick="setRating('digital',2)">2</button>
+          <button class="rating-btn" data-group="digital" data-val="3" onclick="setRating('digital',3)">3</button>
+          <button class="rating-btn" data-group="digital" data-val="4" onclick="setRating('digital',4)">4</button>
+          <button class="rating-btn" data-group="digital" data-val="5" onclick="setRating('digital',5)">5</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Years of relevant work experience</label>
+        <select class="form-select" id="q-experience">
+          <option value="">Select…</option>
+          <option value="0">No experience yet (student / fresh graduate)</option>
+          <option value="1">Less than 1 year</option>
+          <option value="2">1–3 years</option>
+          <option value="4">3–6 years</option>
+          <option value="6">6–10 years</option>
+          <option value="8">10+ years</option>
+        </select>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Highest level of education completed</label>
+        <select class="form-select" id="q-education">
+          <option value="">Select…</option>
+          <option value="1">Secondary / MAVO / HAVO / VWO</option>
+          <option value="2">Vocational / MBO / NATIN</option>
+          <option value="3">Associate degree / HBO (year 1–2)</option>
+          <option value="4">Bachelor's degree / HBO</option>
+          <option value="5">Master's degree or higher</option>
+        </select>
+      </div>
+
+      <div class="section-nav">
+        <button class="btn-prev" disabled>← Back</button>
+        <button class="btn-next" onclick="goTo(2)">Next: Soft Skills →</button>
+      </div>
+    </div>
+
+    <!-- SECTION 2: SOFT SKILLS -->
+    <div class="section-card" id="sec-2">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title-text">Soft Skills & Personality</div>
+      </div>
+      <p class="section-sub">Rate how you perform in these workplace behaviours. Be honest, there are no wrong answers.</p>
+
+      <div class="question-group">
+        <label class="question-label">Communication & presentation</label>
+        <span class="question-hint">Clearly expressing ideas verbally and in writing, active listening, reporting.</span>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('communication',1)">1</button>
+          <button class="rating-btn" onclick="setRating('communication',2)">2</button>
+          <button class="rating-btn" onclick="setRating('communication',3)">3</button>
+          <button class="rating-btn" onclick="setRating('communication',4)">4</button>
+          <button class="rating-btn" onclick="setRating('communication',5)">5</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Teamwork & collaboration</label>
+        <span class="question-hint">Working effectively in groups, sharing knowledge, supporting colleagues.</span>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('teamwork',1)">1</button>
+          <button class="rating-btn" onclick="setRating('teamwork',2)">2</button>
+          <button class="rating-btn" onclick="setRating('teamwork',3)">3</button>
+          <button class="rating-btn" onclick="setRating('teamwork',4)">4</button>
+          <button class="rating-btn" onclick="setRating('teamwork',5)">5</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Leadership & initiative</label>
+        <span class="question-hint">Taking charge, motivating others, identifying and solving problems proactively.</span>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('leadership',1)">1</button>
+          <button class="rating-btn" onclick="setRating('leadership',2)">2</button>
+          <button class="rating-btn" onclick="setRating('leadership',3)">3</button>
+          <button class="rating-btn" onclick="setRating('leadership',4)">4</button>
+          <button class="rating-btn" onclick="setRating('leadership',5)">5</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Problem-solving & analytical thinking</label>
+        <span class="question-hint">Breaking down complex issues, evaluating options, making sound decisions under pressure.</span>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('problemsolving',1)">1</button>
+          <button class="rating-btn" onclick="setRating('problemsolving',2)">2</button>
+          <button class="rating-btn" onclick="setRating('problemsolving',3)">3</button>
+          <button class="rating-btn" onclick="setRating('problemsolving',4)">4</button>
+          <button class="rating-btn" onclick="setRating('problemsolving',5)">5</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Adaptability & stress management</label>
+        <span class="question-hint">Handling change, working under pressure, maintaining quality during challenging periods.</span>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('adaptability',1)">1</button>
+          <button class="rating-btn" onclick="setRating('adaptability',2)">2</button>
+          <button class="rating-btn" onclick="setRating('adaptability',3)">3</button>
+          <button class="rating-btn" onclick="setRating('adaptability',4)">4</button>
+          <button class="rating-btn" onclick="setRating('adaptability',5)">5</button>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <button class="btn-prev" onclick="goTo(1)">← Back</button>
+        <button class="btn-next" onclick="goTo(3)">Next: Languages →</button>
+      </div>
+    </div>
+
+    <!-- SECTION 3: LANGUAGE PROFICIENCY -->
+    <div class="section-card" id="sec-3">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title-text">Language Proficiency</div>
+      </div>
+      <p class="section-sub">Rate your level in each language. Many Suriname employers require professional-level Dutch or English.</p>
+
+      <div class="question-group">
+        <label class="question-label">Dutch (Nederlands)</label>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('dutch',1)">1, None</button>
+          <button class="rating-btn" onclick="setRating('dutch',2)">2, Basic</button>
+          <button class="rating-btn" onclick="setRating('dutch',3)">3, Conversational</button>
+          <button class="rating-btn" onclick="setRating('dutch',4)">4, Professional</button>
+          <button class="rating-btn" onclick="setRating('dutch',5)">5, Native</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">English</label>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('english',1)">1, None</button>
+          <button class="rating-btn" onclick="setRating('english',2)">2, Basic</button>
+          <button class="rating-btn" onclick="setRating('english',3)">3, Conversational</button>
+          <button class="rating-btn" onclick="setRating('english',4)">4, Professional</button>
+          <button class="rating-btn" onclick="setRating('english',5)">5, Native</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Spanish</label>
+        <div class="rating-row">
+          <button class="rating-btn" onclick="setRating('spanish',1)">1, None</button>
+          <button class="rating-btn" onclick="setRating('spanish',2)">2, Basic</button>
+          <button class="rating-btn" onclick="setRating('spanish',3)">3, Conversational</button>
+          <button class="rating-btn" onclick="setRating('spanish',4)">4, Professional</button>
+          <button class="rating-btn" onclick="setRating('spanish',5)">5, Native</button>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Sranan Tongo / Other regional languages</label>
+        <div class="pill-group">
+          <input type="checkbox" id="lang-sranan" class="pill-option" value="Sranan"><label for="lang-sranan" class="pill-label">Sranan Tongo</label>
+          <input type="checkbox" id="lang-hindi" class="pill-option" value="Sarnami Hindi"><label for="lang-hindi" class="pill-label">Sarnami Hindi</label>
+          <input type="checkbox" id="lang-javanese" class="pill-option" value="Javanese"><label for="lang-javanese" class="pill-label">Javanese</label>
+          <input type="checkbox" id="lang-chinese" class="pill-option" value="Chinese"><label for="lang-chinese" class="pill-label">Chinese</label>
+          <input type="checkbox" id="lang-portuguese" class="pill-option" value="Portuguese"><label for="lang-portuguese" class="pill-label">Portuguese</label>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <button class="btn-prev" onclick="goTo(2)">← Back</button>
+        <button class="btn-next" onclick="goTo(4)">Next: Career Goals →</button>
+      </div>
+    </div>
+
+    <!-- SECTION 4: CAREER GOALS -->
+    <div class="section-card" id="sec-4">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title-text">Career Goals & Availability</div>
+      </div>
+      <p class="section-sub">Help us understand what you're looking for so we can match you to the right role.</p>
+
+      <div class="question-group">
+        <label class="question-label">Your full name</label>
+        <input type="text" class="form-input" id="q-name" placeholder="e.g. Maria Lourens" />
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Email address</label>
+        <input type="email" class="form-input" id="q-email" placeholder="you@example.com" />
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">What type of employment are you looking for?</label>
+        <div class="pill-group">
+          <input type="radio" id="emp-perm" name="emp-type" class="pill-option" value="Permanent"><label for="emp-perm" class="pill-label">Permanent</label>
+          <input type="radio" id="emp-temp" name="emp-type" class="pill-option" value="Temporary"><label for="emp-temp" class="pill-label">Temporary / Flex</label>
+          <input type="radio" id="emp-contract" name="emp-type" class="pill-option" value="Contract"><label for="emp-contract" class="pill-label">Contract</label>
+          <input type="radio" id="emp-any" name="emp-type" class="pill-option" value="Any"><label for="emp-any" class="pill-label">Open to any</label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Desired seniority level</label>
+        <select class="form-select" id="q-seniority">
+          <option value="">Select…</option>
+          <option value="Entry">Entry level / Junior</option>
+          <option value="Mid">Mid-level</option>
+          <option value="Senior">Senior / Specialist</option>
+          <option value="Management">Team Lead / Management</option>
+          <option value="Executive">Director / Executive</option>
+        </select>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">When can you start?</label>
+        <div class="pill-group">
+          <input type="radio" id="avail-now" name="availability" class="pill-option" value="Immediately"><label for="avail-now" class="pill-label">Immediately</label>
+          <input type="radio" id="avail-2w" name="availability" class="pill-option" value="2 weeks"><label for="avail-2w" class="pill-label">2 weeks notice</label>
+          <input type="radio" id="avail-month" name="availability" class="pill-option" value="1 month"><label for="avail-month" class="pill-label">1 month notice</label>
+          <input type="radio" id="avail-more" name="availability" class="pill-option" value="2+ months"><label for="avail-more" class="pill-label">2+ months</label>
+        </div>
+      </div>
+
+      <div class="question-group">
+        <label class="question-label">Career ambition, what matters most to you?</label>
+        <div class="pill-group">
+          <input type="checkbox" id="amb-salary" class="pill-option" value="Higher salary"><label for="amb-salary" class="pill-label">Higher salary</label>
+          <input type="checkbox" id="amb-growth" class="pill-option" value="Career growth"><label for="amb-growth" class="pill-label">Career growth</label>
+          <input type="checkbox" id="amb-balance" class="pill-option" value="Work-life balance"><label for="amb-balance" class="pill-label">Work-life balance</label>
+          <input type="checkbox" id="amb-stable" class="pill-option" value="Job stability"><label for="amb-stable" class="pill-label">Job stability</label>
+          <input type="checkbox" id="amb-learn" class="pill-option" value="Learning & development"><label for="amb-learn" class="pill-label">Learning & development</label>
+          <input type="checkbox" id="amb-lead" class="pill-option" value="Leadership opportunities"><label for="amb-lead" class="pill-label">Leadership opportunities</label>
+        </div>
+      </div>
+
+      <div class="section-nav">
+        <button class="btn-prev" onclick="goTo(3)">← Back</button>
+        <button class="btn-next" onclick="submitAssessment()" style="background:var(--gold);color:var(--navy);">View My Results →</button>
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div id="results-card">
+      <div class="results-header">
+        <div class="trophy">🏆</div>
+        <h2>Your Skills Profile</h2>
+        <p id="results-name-line">Here's how your skills stack up and the roles we recommend for you.</p>
+      </div>
+
+      <!-- SCORE BARS -->
+      <div class="score-section">
+        <h3>Technical Dimension</h3>
+        <div class="score-row">
+          <div class="score-name">Technical Skills</div>
+          <div class="score-track"><div class="score-fill" id="bar-technical" style="width:0%;background:var(--navy)"></div></div>
+          <div class="score-val" id="val-technical">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">Digital Literacy</div>
+          <div class="score-track"><div class="score-fill" id="bar-digital" style="width:0%;background:var(--navy)"></div></div>
+          <div class="score-val" id="val-digital">—</div>
+        </div>
+      </div>
+
+      <div class="score-section">
+        <h3>Soft Skills Dimension</h3>
+        <div class="score-row">
+          <div class="score-name">Communication</div>
+          <div class="score-track"><div class="score-fill" id="bar-communication" style="width:0%;background:#4f46e5"></div></div>
+          <div class="score-val" id="val-communication">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">Teamwork</div>
+          <div class="score-track"><div class="score-fill" id="bar-teamwork" style="width:0%;background:#4f46e5"></div></div>
+          <div class="score-val" id="val-teamwork">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">Leadership</div>
+          <div class="score-track"><div class="score-fill" id="bar-leadership" style="width:0%;background:#4f46e5"></div></div>
+          <div class="score-val" id="val-leadership">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">Problem Solving</div>
+          <div class="score-track"><div class="score-fill" id="bar-problemsolving" style="width:0%;background:#4f46e5"></div></div>
+          <div class="score-val" id="val-problemsolving">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">Adaptability</div>
+          <div class="score-track"><div class="score-fill" id="bar-adaptability" style="width:0%;background:#4f46e5"></div></div>
+          <div class="score-val" id="val-adaptability">—</div>
+        </div>
+      </div>
+
+      <div class="score-section">
+        <h3>Language Dimension</h3>
+        <div class="score-row">
+          <div class="score-name">Dutch</div>
+          <div class="score-track"><div class="score-fill" id="bar-dutch" style="width:0%;background:var(--gold)"></div></div>
+          <div class="score-val" id="val-dutch">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">English</div>
+          <div class="score-track"><div class="score-fill" id="bar-english" style="width:0%;background:var(--gold)"></div></div>
+          <div class="score-val" id="val-english">—</div>
+        </div>
+        <div class="score-row">
+          <div class="score-name">Spanish</div>
+          <div class="score-track"><div class="score-fill" id="bar-spanish" style="width:0%;background:var(--gold)"></div></div>
+          <div class="score-val" id="val-spanish">—</div>
+        </div>
+      </div>
+
+      <!-- ROLE MATCHES -->
+      <div class="roles-section">
+        <h3>Recommended Roles for You</h3>
+        <div class="role-cards" id="role-cards"></div>
+      </div>
+
+      <!-- APPLY CTA -->
+      <div class="apply-cta">
+        <h3>Ready to take the next step?</h3>
+        <p>A Brider consultant will review your profile and reach out with matching opportunities.</p>
+        <a href="index.html#jobs" class="btn-gold-solid">Browse Open Positions →</a>
+        <a href="smart-assessment.html" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:transparent;color:rgba(255,255,255,.7);font-size:.85rem;font-weight:600;text-decoration:none;border:1.5px solid rgba(255,255,255,.25);padding:10px 22px;border-radius:8px;transition:all .3s ease;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,.25)';this.style.color='rgba(255,255,255,.7)'">How Brider Assesses Candidates 🧠</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Brider Employment Agency N.V. · <a href="index.html">Home</a> · <a href="mailto:info@bridernv.com">info@bridernv.com</a></p>
+</footer>
+
+<script>
+  // ── Ratings store ──
+  const ratings = {};
+
+  function setRating(group, val) {
+    ratings[group] = val;
+    // Update button states
+    document.querySelectorAll(`[data-group="${group}"], .rating-btn[onclick*="'${group}'"]`).forEach(btn => {
+      btn.classList.remove('selected');
+    });
+    // Find all buttons in the same row and mark selected
+    const allBtns = document.querySelectorAll('.rating-btn');
+    allBtns.forEach(btn => {
+      const fn = btn.getAttribute('onclick') || '';
+      if (fn.includes(`'${group}'`)) {
+        btn.classList.remove('selected');
+        if (parseInt(fn.match(/,(\d)/)?.[1]) === val) btn.classList.add('selected');
+      }
+    });
+  }
+
+  // ── Navigation ──
+  let currentSection = 1;
+  const TOTAL = 4;
+
+  function goTo(n) {
+    document.getElementById('sec-' + currentSection).classList.remove('active');
+    document.getElementById('results-card').style.display = 'none';
+
+    if (n > TOTAL) {
+      showResults();
+      return;
+    }
+
+    currentSection = n;
+    document.getElementById('sec-' + n).classList.add('active');
+
+    // Progress bar
+    const pct = (n / (TOTAL + 1)) * 100;
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-text').textContent = 'Section ' + n + ' of ' + TOTAL;
+
+    // Label highlights
+    for (let i = 1; i <= TOTAL + 1; i++) {
+      const lbl = document.getElementById('lbl-' + i);
+      if (lbl) lbl.classList.toggle('active', i === n);
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── Submit & show results ──
+  function submitAssessment() {
+    const name  = document.getElementById('q-name').value.trim();
+    const email = document.getElementById('q-email').value.trim();
+
+    if (!name || !email) {
+      alert('Please enter your name and email so we can follow up with you.');
+      return;
+    }
+
+    document.getElementById('sec-4').classList.remove('active');
+    document.getElementById('progress-fill').style.width = '100%';
+    document.getElementById('progress-text').textContent = 'Complete!';
+    const lbl5 = document.getElementById('lbl-5');
+    if (lbl5) lbl5.classList.add('active');
+
+    document.getElementById('results-name-line').textContent =
+      'Here\'s how your skills stack up, ' + name.split(' ')[0] + '. We\'ll be in touch with matched opportunities.';
+
+    // Animate score bars
+    const bars = ['technical','digital','communication','teamwork','leadership','problemsolving','adaptability','dutch','english','spanish'];
+    setTimeout(() => {
+      bars.forEach(key => {
+        const val = ratings[key] || 0;
+        const pct = (val / 5) * 100;
+        const bar = document.getElementById('bar-' + key);
+        const lbl = document.getElementById('val-' + key);
+        if (bar) bar.style.width = pct + '%';
+        if (lbl) lbl.textContent = val ? val + '/5' : 'N/A';
+      });
+    }, 100);
+
+    // Role recommendations, also returns the text profile
+    const skillsProfile = generateRoles();
+
+    document.getElementById('results-card').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // ── POST to Google Sheets ──
+    const ASSESSMENT_URL = 'https://script.google.com/macros/s/AKfycbwXcxsZJENUDdvy2dOJ7jUrzHxeBXjzTSAXdbdonk-48i-NyQZNdb6AjMKs6175ZnPF/exec';
+
+    fetch(ASSESSMENT_URL, {
+      method: 'POST',
+      mode:   'no-cors',
+      body:   JSON.stringify({
+        name:           name,
+        email:          email,
+        sector:         document.querySelector('input[name="sector"]:checked')?.value || '',
+        experience:     document.getElementById('q-experience').value || '',
+        education:      document.getElementById('q-education').value  || '',
+        technical:      ratings['technical']     || 0,
+        digital:        ratings['digital']       || 0,
+        communication:  ratings['communication'] || 0,
+        teamwork:       ratings['teamwork']      || 0,
+        leadership:     ratings['leadership']    || 0,
+        problemsolving: ratings['problemsolving']|| 0,
+        adaptability:   ratings['adaptability']  || 0,
+        dutch:          ratings['dutch']         || 0,
+        english:        ratings['english']       || 0,
+        spanish:        ratings['spanish']       || 0,
+        employmentType: document.querySelector('input[name="emp-type"]:checked')?.value  || '',
+        seniority:      document.getElementById('q-seniority').value || '',
+        skillsProfile:  skillsProfile
+      })
+    }).catch(() => {}); // fire-and-forget
+  }
+
+  function showResults() { submitAssessment(); }
+
+  // ── Role matching logic ──
+  function generateRoles() {
+    const sector     = document.querySelector('input[name="sector"]:checked')?.value || 'Other';
+    const tech       = ratings['technical']     || 0;
+    const digital    = ratings['digital']       || 0;
+    const leadership = ratings['leadership']    || 0;
+    const comm       = ratings['communication'] || 0;
+    const teamwork   = ratings['teamwork']      || 0;
+    const problem    = ratings['problemsolving']|| 0;
+    const adapt      = ratings['adaptability']  || 0;
+    const dutch      = ratings['dutch']         || 0;
+    const english    = ratings['english']       || 0;
+    const spanish    = ratings['spanish']       || 0;
+    const exp        = parseInt(document.getElementById('q-experience').value) || 0;
+    const seniority  = document.getElementById('q-seniority').value;
+    const empType    = document.querySelector('input[name="emp-type"]:checked')?.value || '';
+
+    const roleMap = {
+      'ICT':          [
+        { icon:'💻', title:'Software Developer',       desc:'Backend, frontend or full-stack development roles.',         match: tech >= 3 ? 'high' : 'mid' },
+        { icon:'🔐', title:'IT Systems Administrator', desc:'Network, infrastructure and security management.',           match: tech >= 3 && exp >= 2 ? 'high' : 'mid' },
+        { icon:'📊', title:'Data Analyst',             desc:'Business intelligence, reporting and data modelling roles.', match: tech >= 2 ? 'high' : 'mid' },
+      ],
+      'Construction': [
+        { icon:'🏗️', title:'Project Engineer',         desc:'Site supervision, planning and technical coordination.',     match: tech >= 3 && exp >= 2 ? 'high' : 'mid' },
+        { icon:'🔧', title:'Maintenance Technician',   desc:'Industrial maintenance, mechanical and electrical roles.',   match: tech >= 2 ? 'high' : 'mid' },
+        { icon:'📐', title:'Construction Manager',     desc:'Oversight of construction projects and teams.',              match: leadership >= 3 && exp >= 4 ? 'high' : 'mid' },
+      ],
+      'Healthcare':   [
+        { icon:'🏥', title:'Registered Nurse',         desc:'Clinical nursing in hospitals or community settings.',       match: tech >= 3 ? 'high' : 'mid' },
+        { icon:'🩺', title:'Medical Specialist',        desc:'Specialist physician or clinical expert roles.',             match: tech >= 4 && exp >= 4 ? 'high' : 'mid' },
+        { icon:'💊', title:'Healthcare Administrator', desc:'Operational and administrative healthcare management.',       match: comm >= 3 ? 'high' : 'mid' },
+      ],
+      'Finance':      [
+        { icon:'📈', title:'Financial Analyst',        desc:'Budgeting, forecasting and investment analysis.',            match: tech >= 3 ? 'high' : 'mid' },
+        { icon:'🏦', title:'Accountant / Auditor',     desc:'Financial reporting, compliance and audit roles.',           match: tech >= 2 && exp >= 1 ? 'high' : 'mid' },
+        { icon:'💼', title:'Finance Manager',          desc:'Financial strategy, team leadership and reporting.',         match: leadership >= 3 && exp >= 4 ? 'high' : 'mid' },
+      ],
+      'Energy':       [
+        { icon:'⚡', title:'Process Engineer',         desc:'Oil, gas or renewables plant operations and optimisation.',  match: tech >= 3 && exp >= 2 ? 'high' : 'mid' },
+        { icon:'🔩', title:'Field Technician',         desc:'On-site installation, maintenance and inspection.',          match: tech >= 2 ? 'high' : 'mid' },
+        { icon:'📋', title:'HSE Officer',              desc:'Health, Safety and Environment compliance and training.',    match: comm >= 3 ? 'high' : 'mid' },
+      ],
+      'Other':        [
+        { icon:'🌐', title:'Operations Coordinator',   desc:'Cross-functional coordination and process improvement.',    match: comm >= 3 ? 'high' : 'mid' },
+        { icon:'📣', title:'Office / Admin Professional', desc:'Administrative support, scheduling and communications.', match: 'high' },
+        { icon:'🤝', title:'Client Relations Manager', desc:'Account management, customer success and retention.',       match: comm >= 4 && english >= 3 ? 'high' : 'mid' },
+      ],
+    };
+
+    const roles = roleMap[sector] || roleMap['Other'];
+
+    // ── Render role cards ──
+    const container = document.getElementById('role-cards');
+    container.innerHTML = roles.map(r => `
+      <div class="role-card">
+        <div class="role-card-icon">${r.icon}</div>
+        <div>
+          <h4>${r.title}</h4>
+          <p>${r.desc}</p>
+          <span class="match-badge match-${r.match}">${r.match === 'high' ? '✓ Strong match' : '~ Good match'}</span>
+        </div>
+      </div>
+    `).join('');
+
+    // ── Build text profile for Google Sheets ──
+    const labelMap = { 1:'Beginner', 2:'Basic', 3:'Competent', 4:'Advanced', 5:'Expert' };
+    const langMap  = { 1:'None', 2:'Basic', 3:'Conversational', 4:'Professional', 5:'Native' };
+
+    const allScores = [
+      ['Technical Skills', tech], ['Digital Literacy', digital],
+      ['Communication', comm],    ['Teamwork', teamwork],
+      ['Leadership', leadership], ['Problem Solving', problem],
+      ['Adaptability', adapt]
+    ];
+    const strongest = allScores.filter(s => s[1] >= 4).map(s => s[0]);
+    const developing = allScores.filter(s => s[1] <= 2 && s[1] > 0).map(s => s[0]);
+
+    const profileLines = [
+      '*** YOUR SKILLS PROFILE ***',
+      '',
+      'SECTOR: ' + sector,
+      'SENIORITY: ' + (seniority || 'Not specified'),
+      'EMPLOYMENT TYPE: ' + (empType || 'Not specified'),
+      '',
+      '--- TECHNICAL DIMENSION ---',
+      'Technical Skills:   ' + (tech    ? tech + '/5 (' + labelMap[tech]    + ')' : 'Not rated'),
+      'Digital Literacy:   ' + (digital ? digital + '/5 (' + labelMap[digital] + ')' : 'Not rated'),
+      '',
+      '--- SOFT SKILLS ---',
+      'Communication:      ' + (comm       ? comm + '/5 (' + labelMap[comm]       + ')' : 'Not rated'),
+      'Teamwork:           ' + (teamwork   ? teamwork + '/5 (' + labelMap[teamwork]   + ')' : 'Not rated'),
+      'Leadership:         ' + (leadership ? leadership + '/5 (' + labelMap[leadership] + ')' : 'Not rated'),
+      'Problem Solving:    ' + (problem    ? problem + '/5 (' + labelMap[problem]    + ')' : 'Not rated'),
+      'Adaptability:       ' + (adapt      ? adapt + '/5 (' + labelMap[adapt]      + ')' : 'Not rated'),
+      '',
+      '--- LANGUAGES ---',
+      'Dutch:   ' + (dutch   ? dutch + '/5 (' + langMap[dutch]   + ')' : 'Not rated'),
+      'English: ' + (english ? english + '/5 (' + langMap[english] + ')' : 'Not rated'),
+      'Spanish: ' + (spanish ? spanish + '/5 (' + langMap[spanish] + ')' : 'Not rated'),
+      '',
+      '--- RECOMMENDED ROLES ---',
+      ...roles.map(r => (r.match === 'high' ? '[STRONG] ' : '[GOOD]   ') + r.title + ', ' + r.desc),
+      '',
+      '--- SUMMARY ---',
+      strongest.length  ? 'Strongest areas: '    + strongest.join(', ')  : 'No standout strengths rated yet.',
+      developing.length ? 'Areas to develop: '  + developing.join(', ') : 'No areas flagged for development.',
+    ];
+
+    return profileLines.join('\n');
+  }
+</script>
+
+</body>
+</html>

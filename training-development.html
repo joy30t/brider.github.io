@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) with Consent Mode v2 -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      wait_for_update: 500
+    });
+    try {
+      if (localStorage.getItem('brider_consent') === 'granted') {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+          analytics_storage: 'granted'
+        });
+      }
+    } catch (e) {}
+    gtag('js', new Date());
+    gtag('config', 'G-JW7MCLKQR3');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JW7MCLKQR3"></script>
+  <script src="analytics.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Invest in your team with Brider's tailored training and development programmes designed for the Surinamese job market." />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Training & Development, Brider Employment Agency N.V." />
+  <meta property="og:description" content="Invest in your team with Brider's tailored training and development programmes designed for the Surinamese job market." />
+  <meta property="og:image" content="hero-bg.png.png" />
+  <meta property="og:site_name" content="Brider Employment Agency N.V." />
+  <!-- X / Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Training & Development, Brider Employment Agency N.V." />
+  <meta name="twitter:description" content="Invest in your team with Brider's tailored training and development programmes designed for the Surinamese job market." />
+  <meta name="twitter:image" content="hero-bg.png.png" />
+  <title>Training & Development, Brider Employment Agency N.V.</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: #1a2340; background: #fff; line-height: 1.7; }
+    a { text-decoration: none; color: inherit; }
+    :root { --navy:#0b2218;--navy-mid:#0f2d20;--gold:#c9a227;--gold-light:#e2b84a;--gold-pale:#f5e9c0;--cream:#fdf8ee;--muted:#5a6480;--white:#ffffff;--radius:10px;--shadow:0 6px 28px rgba(11,34,24,.13);--transition:0.3s ease; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 28px; }
+    header { position:sticky;top:0;z-index:100;background:var(--navy);box-shadow:0 2px 14px rgba(0,0,0,.3); }
+    nav { display:flex;align-items:center;justify-content:space-between;height:66px; }
+    .logo { display:flex;align-items:center;gap:10px; }
+    .logo-icon { width:36px;height:36px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--navy);font-size:1.1rem;flex-shrink:0; }
+    .logo-name { font-size:.98rem;font-weight:800;color:var(--white); }
+    .logo-sub  { font-size:.6rem;color:var(--gold);text-transform:uppercase;letter-spacing:.1em; }
+    .nav-back { display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.7);font-size:.88rem;font-weight:500;transition:color var(--transition); }
+    .nav-back:hover { color:var(--gold); }
+    .page-hero { background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 60%,#081510 100%);color:var(--white);padding:72px 0 64px;position:relative;overflow:hidden; }
+    .page-hero::before { content:'';position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid rgba(201,162,39,.1);top:-100px;right:-80px;pointer-events:none; }
+    .hero-icon { font-size:3rem;margin-bottom:18px; }
+    .hero-badge { display:inline-block;background:rgba(201,162,39,.15);color:var(--gold-light);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:14px;border:1px solid rgba(201,162,39,.2); }
+    .hero-title { font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.15;margin-bottom:16px; }
+    .hero-title span { color:var(--gold); }
+    .hero-desc { font-size:1.05rem;color:rgba(255,255,255,.7);max-width:560px; }
+    .content-section { padding:72px 0; }
+    .content-section.cream { background:var(--cream); }
+    .overview-grid { display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start; }
+    .overview-text h2 { font-size:1.8rem;font-weight:800;margin-bottom:14px; }
+    .overview-text p  { color:var(--muted);margin-bottom:14px;font-size:.97rem; }
+    .benefits-list { display:flex;flex-direction:column;gap:14px; }
+    .benefit-item { display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1.5px solid #e8ecf5;border-radius:12px;padding:18px 20px;transition:border-color var(--transition),box-shadow var(--transition); }
+    .benefit-item:hover { border-color:var(--gold);box-shadow:var(--shadow); }
+    .benefit-icon { font-size:1.4rem;flex-shrink:0;margin-top:2px; }
+    .benefit-text strong { display:block;font-weight:700;font-size:.95rem;margin-bottom:3px; }
+    .benefit-text span   { font-size:.85rem;color:var(--muted); }
+    .programme-grid { display:grid;grid-template-columns:repeat(2,1fr);gap:20px; }
+    .programme-card { background:var(--white);border:1.5px solid #e8ecf5;border-radius:14px;padding:26px 22px;transition:border-color var(--transition),transform var(--transition); }
+    .programme-card:hover { border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow); }
+    .pc-icon { font-size:1.8rem;margin-bottom:12px; }
+    .programme-card h3 { font-size:1rem;font-weight:800;margin-bottom:8px; }
+    .programme-card p  { font-size:.85rem;color:var(--muted);margin-bottom:10px; }
+    .pc-tag { display:inline-block;font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:12px;background:var(--gold-pale);color:var(--navy);letter-spacing:.05em; }
+    .section-badge { display:inline-block;background:var(--gold-pale);color:var(--navy);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px; }
+    .section-title { font-size:1.6rem;font-weight:800;margin-bottom:10px; }
+    .section-sub   { color:var(--muted);font-size:.95rem;margin-bottom:36px;max-width:540px; }
+    .cta-section { background:var(--navy);color:var(--white);padding:64px 0;text-align:center; }
+    .cta-section h2 { font-size:1.9rem;font-weight:900;margin-bottom:12px; }
+    .cta-section p  { color:rgba(255,255,255,.65);margin-bottom:30px;font-size:1rem; }
+    .btn-gold { display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:var(--radius);border:none;cursor:pointer;transition:var(--transition); }
+    .btn-gold:hover { background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35); }
+    .btn-outline { display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:var(--radius);border:2px solid rgba(255,255,255,.4);cursor:pointer;transition:var(--transition);margin-left:12px; }
+    .btn-outline:hover { border-color:var(--gold);color:var(--gold); }
+    footer { background:#060f0a;color:rgba(255,255,255,.5);padding:28px 0;text-align:center;font-size:.83rem; }
+    footer a { color:var(--gold); }
+    @media(max-width:768px){.overview-grid,.programme-grid{grid-template-columns:1fr;gap:36px}.btn-outline{margin-left:0;margin-top:10px}}
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo">
+      <img src="brider-logo.png.png" alt="Brider Employment Agency N.V." style="height:1.52in;width:auto;background:#c9a227;border-radius:8px;padding:4px 8px;" />
+    </a>
+    <a href="index.html#services" class="nav-back">← Back to Services</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-icon">🎓</div>
+    <div class="hero-badge">Our Services</div>
+    <h1 class="hero-title">Training &amp; <span>Development</span></h1>
+    <p class="hero-desc">Upskilling programmes and vocational training designed to make job seekers work-ready and help employers invest in their most valuable asset, their people.</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="overview-grid">
+      <div class="overview-text">
+        <span class="section-badge">Overview</span>
+        <h2 class="section-title">Building Skills. Building Careers. Building Businesses.</h2>
+        <p>At Brider, we believe in more than just placing people in jobs, we invest in making sure they're ready to thrive in them. Our Training &amp; Development arm works with both individual candidates and corporate clients to deliver targeted, practical programmes.</p>
+        <p>From basic computer literacy to professional certifications and soft-skills coaching, our trainers bring real-world experience to every session.</p>
+        <div style="margin-top:24px;">
+          <a href="candidate-assessment.html" class="btn-outline" style="margin-bottom:10px;color:var(--navy);border-color:var(--navy);display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.95rem;padding:13px 30px;border-radius:var(--radius);border:2px solid var(--navy);background:transparent;cursor:pointer;text-decoration:none;">Candidate Self-Assessment ✏️</a>
+    <a href="contact.html" class="btn-gold">Enquire About Training →</a>
+        </div>
+      </div>
+      <div class="benefits-list">
+        <div class="benefit-item">
+          <div class="benefit-icon">📐</div>
+          <div class="benefit-text">
+            <strong>Custom Training Plans</strong>
+            <span>Programmes designed around your organisation's specific skill gaps and business goals.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🏅</div>
+          <div class="benefit-text">
+            <strong>Certified Programmes</strong>
+            <span>Industry-recognised certifications that add real value to a candidate's professional profile.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">🌍</div>
+          <div class="benefit-text">
+            <strong>Language Training</strong>
+            <span>Dutch, English, and Spanish language courses tailored for professional workplace settings.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">💻</div>
+          <div class="benefit-text">
+            <strong>On-site &amp; Remote Delivery</strong>
+            <span>Flexible training formats to suit your team's schedule, at your premises or online.</span>
+          </div>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon">📈</div>
+          <div class="benefit-text">
+            <strong>Progress Tracking</strong>
+            <span>Regular assessments and detailed progress reports for every participant.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section cream">
+  <div class="container">
+    <span class="section-badge">Our Programmes</span>
+    <h2 class="section-title">Training Programmes We Offer</h2>
+    <p class="section-sub">For job seekers building their skills and employers investing in their workforce.</p>
+    <div class="programme-grid">
+      <div class="programme-card">
+        <div class="pc-icon">💻</div>
+        <h3>Digital &amp; Computer Skills</h3>
+        <p>MS Office, internet literacy, email communication, and basic IT skills for the modern workplace.</p>
+        <span class="pc-tag">Beginner → Intermediate</span>
+      </div>
+      <div class="programme-card">
+        <div class="pc-icon">🤝</div>
+        <h3>Soft Skills &amp; Workplace Readiness</h3>
+        <p>Communication, teamwork, time management, and professional conduct essentials.</p>
+        <span class="pc-tag">All Levels</span>
+      </div>
+      <div class="programme-card">
+        <div class="pc-icon">🧑‍💼</div>
+        <h3>Leadership &amp; Management</h3>
+        <p>Team leadership, conflict resolution, decision-making, and performance management for supervisors.</p>
+        <span class="pc-tag">Intermediate → Advanced</span>
+      </div>
+      <div class="programme-card">
+        <div class="pc-icon">🏗️</div>
+        <h3>Vocational &amp; Technical Skills</h3>
+        <p>Industry-specific training in construction, electrical work, welding, plumbing, and HSE safety.</p>
+        <span class="pc-tag">Trade Certification</span>
+      </div>
+      <div class="programme-card">
+        <div class="pc-icon">🌐</div>
+        <h3>Language Courses</h3>
+        <p>Dutch, English, and business Spanish, from basic conversation to professional proficiency.</p>
+        <span class="pc-tag">A1 → C1 Levels</span>
+      </div>
+      <div class="programme-card">
+        <div class="pc-icon">🛡️</div>
+        <h3>HSE &amp; Safety Training</h3>
+        <p>Health, Safety &amp; Environment certifications for construction, oil &amp; gas, and industrial sectors.</p>
+        <span class="pc-tag">Certified</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Invest in Your People</h2>
+    <p>Whether you're an individual seeking to upskill or a company looking to train your team, we have the right programme for you.</p>
+    <a href="candidate-assessment.html" class="btn-outline" style="margin-bottom:10px;">Candidate Self-Assessment ✏️</a>
+    <a href="index.html#contact" class="btn-gold">Enquire Now →</a>
+    <a href="index.html" class="btn-outline">Back to Home</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2026 <a href="index.html">Brider Employment Agency N.V.</a>, All rights reserved.</div>
+</footer>
+</body>
+</html>
